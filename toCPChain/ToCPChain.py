@@ -8,7 +8,7 @@ from cpc_fusion import Web3
 def test_local_sendRawTransaction1(userid,serAd):
     web3 = Web3(Web3.HTTPProvider('http://3.1.81.79:8501'))
     # 玩家的keyfile
-    with open(r'D:\9102Hackthon\cpchain-windows-4.0-amd64\datadir\keystore'+ '\\'+ userid) as keyfile:
+    with open(r'D:\9102Hackthon\workstation\cpchain-windows-4.0-amd64\datadir\keystore'+ '\\'+ userid) as keyfile:
         encrypted_key = keyfile.read()
     private_key_for_senders_account = web3.cpc.account.decrypt(encrypted_key, '123456')
     from_addr = web3.toChecksumAddress('0x'+userid) ##玩家为发送者
@@ -20,7 +20,7 @@ def test_local_sendRawTransaction1(userid,serAd):
             gas=180000,
             to=to_addr,             #发送给服务器地址58d0791b5c4ddb460a89feda48a2ed935fb757ec
             value=300000000,        #失败则用户CPC减0.000003
-            data=b'w',
+            data=b'l',
             chainId=42,
         )
     signed_txn = web3.cpc.account.signTransaction(tx_dict,
@@ -32,7 +32,7 @@ def test_local_sendRawTransaction1(userid,serAd):
 #成功时服务器给用户发信息
 def test_local_sendRawTransaction2(userid,serAd):
     web3 = Web3(Web3.HTTPProvider('http://3.1.81.79:8501'))
-    with open(r'D:\9102Hackthon\cpchain-windows-4.0-amd64\datadir\keystore'+ '\\'+ serAd) as keyfile:
+    with open(r'D:\9102Hackthon\workstation\cpchain-windows-4.0-amd64\datadir\keystore'+ '\\'+ serAd) as keyfile:
         encrypted_key = keyfile.read()
     private_key_for_senders_account = web3.cpc.account.decrypt(encrypted_key, '123456')
     from_addr = web3.toChecksumAddress('0x'+serAd)      #服务器为发送者
@@ -56,7 +56,7 @@ def test_local_sendRawTransaction2(userid,serAd):
 #异常时自己给自己发送消息
 def test_local_sendRawTransaction3(userid,serAd):
     web3 = Web3(Web3.HTTPProvider('http://3.1.81.79:8501'))
-    with open(r'D:\9102Hackthon\cpchain-windows-4.0-amd64\datadir\keystore'+ '\\'+ userid) as keyfile:
+    with open(r'D:\9102Hackthon\workstation\cpchain-windows-4.0-amd64\datadir\keystore'+ '\\'+ userid) as keyfile:
         encrypted_key = keyfile.read()
     private_key_for_senders_account = web3.cpc.account.decrypt(encrypted_key, '123456')
     from_addr = web3.toChecksumAddress('0x'+userid) 

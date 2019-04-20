@@ -7,7 +7,7 @@ var arg2 = '58D0791b5C4ddB460a89FedA48A2ED935Fb757Ec'
 var arg3 = '4'
 
 // 测试时使用的绝对路径，其他情况时可以适当改变
-exec('python D:\\9102Hackthon\\toCPChain\\pbntest2.py ' + arg1 + ' ' + arg2 + ' ' + arg3, function(error, stdout, stderr) {
+exec('python D:\\9102Hackthon\\workstation\\toCPChain\\ToCPChain.py ' + arg1 + ' ' + arg2 + ' ' + arg3, function(error, stdout, stderr) {
     if (stdout.length > 1) {
         console.log(stdout);
     } else {

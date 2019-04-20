@@ -7,7 +7,7 @@ import time
 
 def test_local_sendRawTransaction1(userid,serAd):
     web3 = Web3(Web3.HTTPProvider('http://3.1.81.79:8501'))
-    with open(r'D:\9102Hackthon\cpchain-windows-4.0-amd64\datadir\keystore'+ '\\'+ userid) as keyfile:
+    with open(r'D:\9102Hackthon\workstation\cpchain-windows-4.0-amd64\datadir\keystore'+ '\\'+ userid) as keyfile:
         encrypted_key = keyfile.read()
     private_key_for_senders_account = web3.cpc.account.decrypt(encrypted_key, '123456')
     from_addr = web3.toChecksumAddress('0x'+userid)
