@@ -1,4 +1,4 @@
-## BitRun Hackatho
+## BitRun Hackathon
 Team： 5bit
 ####新产品方案
  游戏名称
