@@ -1,5 +1,6 @@
-## BitRun Hackathon
+## 9102 BitRun Hackathon
 ## Team： 5bit
+ #### 团队成员：中央财经大学 马润薪（wolong001） 朱润南（Porkia） 李泓源（lhylanglang） 方红超（ColeFang） 铁静杰（Giggleee）
  #### 游戏名称 Bit Surviver
  
  你被一股神秘的力量包裹，卷到了一个不为人知的地方之中，你的唯一目的就是存活下去。
