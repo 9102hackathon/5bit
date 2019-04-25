@@ -42,4 +42,6 @@
 ——同一物品带来的效果是唯一不可叠加的。
 
  #### Language
- JavaScript，python，其他
+ JavaScript，Python，Java，solidity
+ #### 所需开发工具
+ Cocos Creator
